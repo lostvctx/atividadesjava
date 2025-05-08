@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="contas"/>
+        <attribute name="authors" value="victor.lfsnaranjos"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-08 03:08:07 "/>
+        <attribute name="created" value="dmljdG9yLmxmc25hcmFuam9zO1NBTjA2NzQ0MDlXMTEtMTsyMDI1LTA1LTA4OyIwMTo1Mzo0OSAiOzM5NjQ="/>
+        <attribute name="edited" value="dmljdG9yLmxmc25hcmFuam9zO1NBTjA2NzQ0MDlXMTEtMTsyMDI1LTA1LTA4OyIwMzowODowNyAiOzE7NDA2OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="min, max, i" type="Integer" array="False" size=""/>
+            <output expression="&quot; digite o primeiro numero&quot;" newline="True"/>
+            <input variable="min"/>
+            <output expression="&quot;digite um numero maior que o anterior&quot;" newline="True"/>
+            <input variable="max"/>
+            <assign variable="i" expression="min"/>
+            <while expression="i&lt;max">
+                <if expression="(i % 2 == 0)">
+                    <then>
+                        <output expression="i &amp;  &quot; - par&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="i &amp; &quot; - impar&quot;" newline="True"/>
+                    </else>
+                </if>
+                <assign variable="i" expression="i + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
