@@ -1,27 +1,25 @@
 function main() {
-    const min = parseInt(prompt(" digite o primeiro numero"));
-    const max = parseInt(prompt(" digite um numero menor que o anterior"));
+    let min = parseInt(prompt("Digite um número..."));
+    let max = parseInt(prompt("Digite um número maior que o anterior..."));
 
+    if (isNaN(min) || isNaN(max) || min >= max) {
+        alert("Digite um número válido...");
+        return;
+    }
 
+    calculos(min, max);
 }
 
-function mostrarNumeros(min, max) {
-    let resultado = ""
-    function parImpar(numero) {
-        return numero % 2 === 0 ? "par" : "impar"
-
-    }
-    for (let i = min + 1; i < max; < i ++) {
-        alert(resultado = + `${i} - ${parImpar(i)} \n`);
-        if (min < max) {
-            mostrarNumeros(min, max);
-
+function calculos(inicio, fim) {
+    let i = inicio;
+    while (i < fim) {
+        if (i % 2 == 0) {
+            alert(i + " - par");
         } else {
-            alert("digite um numero valido!!")
+            alert(i + " - ímpar");
         }
-
+        i++;
     }
 }
-
 
 main();
